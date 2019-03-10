@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.site-footer {
+    padding: 4rem 0;
+    background: $color-brand-alt;
+
+    @include mq(lg) {
+        padding: 4rem 0 6rem;
+    }
+
+    @include mq(lg) {
+        padding: 6rem 0 8rem;
+    }
+}

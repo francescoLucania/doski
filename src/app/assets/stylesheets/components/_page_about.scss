@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.page-about {
+    text-align: center;
+
+    > p {
+        @include text-lg;
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+}

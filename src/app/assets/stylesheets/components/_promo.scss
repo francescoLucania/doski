@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+.promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: {
+        position: 50%;
+        size: cover;
+        repeat: no-repeat;
+        color: $color-minor;
+    };
+    color: #fff;
+
+    @include mq(lg) {
+        height: 100vh;
+        min-height: 70rem;
+        max-height: 80rem;
+    }
+
+    &__logo-box {
+
+        @include mq(md) {
+            margin-bottom: 2.4rem;
+        }
+
+        @include mq(lg) {
+            @include size(30rem, 35.2rem);
+
+            margin-bottom: 4rem;
+        }
+        background: #fff;
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    &__title {
+        @include h1;
+
+        @include mq(lg) {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__description {
+        @include text-lg;
+    }
+}

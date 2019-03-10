@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.section {
+    padding: 6rem 0;
+
+    @include mq(md) {
+        padding: 8rem 0;
+    }
+
+    @include mq(lg) {
+        padding: 16rem 0;
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    &__title {
+        @include h2;
+
+        color: $color-brand;
+    }
+
+    &__description {
+        @include text-lg;
+
+        margin-top: 3rem;
+    }
+}
