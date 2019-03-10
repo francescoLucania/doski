@@ -33,3 +33,63 @@
         }
     }
 }
+
+.product-card {
+    > a {
+        @include interact(color, $color-brand, 'hover .product-card__title');
+        @include interact(color, $color-base, 'hover .product-card__price');
+
+        transition: all 0s;
+
+        display: block;
+        color: inherit;
+
+        .mod_no-touchevents & {
+            &:hover {
+                .product-card__title > span::before {
+                    background-color: $color-brand;
+                }
+            }
+        }
+
+    }
+    &__image {
+        > img {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
+    }
+
+    &__information {
+        margin-top: .5rem;
+    }
+
+    &__title {
+        @include text-lg;
+
+        transition: color $transition-duration-base;
+
+        > span {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $color-brand-alt;
+                transition: background-color $transition-duration-base;
+                content: "";
+            }
+        }
+    }
+
+    &__price {
+        @include text-md;
+
+        transition: color $transition-duration-base;
+    }
+}

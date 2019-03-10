@@ -281,9 +281,9 @@
 
 // Links
 @mixin link-base {
-    @include interact(color, darken($color-link, 20%));
+    @include interact(color, $color-brand);
 
-    color: $color-link;
+    color: $color-brand-alt;
 }
 
 // Placeholder

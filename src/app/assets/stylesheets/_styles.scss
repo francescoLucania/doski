@@ -58,6 +58,7 @@ main { // 1
 a {
     @include link-base;
 
+    text-decoration: none;
     transition: all $transition-duration-base;
 }
 
