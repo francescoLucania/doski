@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.is-sm {
+    display: none !important;
+
+    @include mq(sm) {
+        display: block !important;
+    }
+}
+
+.is-md {
+    display: none !important;
+
+    @include mq(md) {
+        display: block !important;
+    }
+}

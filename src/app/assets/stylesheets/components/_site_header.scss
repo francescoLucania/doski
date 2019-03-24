@@ -4,4 +4,78 @@
     position: fixed;
     left: 0;
     right: 0;
+    z-index: 999;
+    color: #fff;
+
+    &__container {
+        padding: 2.6rem map_get($mq-container-indents, 'sm') 3.6rem;
+
+        @include mq(md) {
+            padding: 4.6rem 6rem 5.6rem;
+            max-width: 144rem;
+            margin: 0 auto;
+        }
+    }
+
+    &__grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__title {
+        @include font(2.4rem, 2.8rem);
+
+        font-weight: bold;
+
+        > a {
+            @include interact(color, #fff);
+            @include interact(opacity, .5);
+
+            color: #fff;
+        }
+    }
+
+    &__navigate {
+        > ul {
+            @include mq(md) {
+                display: flex;
+            }
+
+            > li {
+                &:not(:first-child) {
+                    margin-left: 2.8rem;
+                }
+
+                > a {
+                    @include interact(color, #fff);
+                    @include interact(opacity, .5);
+
+                    position: relative;
+                    color: #fff;
+                    font-weight: bold;
+                    transition: opacity $transition-duration-base;
+
+                    &:not(.is-current) {
+                        @include mq(md) {
+                            &::before  {
+                                position: absolute;
+                                bottom: 0;
+                                width: 100%;
+                                height: .2rem;
+                                background: #fff;
+                                content: "";
+                            }
+                        }
+                    }
+
+                    &.is-current {
+                        opacity: .5;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
 }

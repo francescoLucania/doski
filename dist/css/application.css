@@ -13,6 +13,26 @@
   line-height: 1.88;
 }
 
+.is-sm {
+  display: none !important;
+}
+
+@media all and (max-width: 767px) {
+  .is-sm {
+    display: block !important;
+  }
+}
+
+.is-md {
+  display: none !important;
+}
+
+@media all and (min-width: 768px) {
+  .is-md {
+    display: block !important;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -42,6 +62,7 @@ body {
   font-family: TTNormsRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   height: auto !important;
+  cursor: none;
 }
 
 .mod_flexboxtweener body {
@@ -112,6 +133,13 @@ h1 {
 
 h1 a {
   text-decoration: none;
+}
+
+@media all and (max-width: 767px) {
+  h1 {
+    font-size: 3.8rem;
+    line-height: 1;
+  }
 }
 
 h2 {
@@ -205,6 +233,121 @@ table {
 
 :disabled {
   cursor: not-allowed;
+}
+
+/* ----------------------------
+
+  cursor styles
+
+--------------------------- */
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: block;
+  /*styles applied for showing / hiding cursor - do not touch*/
+  transition: opacity 300ms linear;
+  opacity: 0;
+  /*element width*/
+  width: 6px;
+  height: 6px;
+}
+
+.cursor.moving {
+  opacity: 1;
+}
+
+.cursor::before {
+  content: ' ';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #b89d6f;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  /* transitions animations*/
+  opacity: 1;
+  transition: opacity 300ms linear;
+}
+
+/* expand is the class you assigned with the plugin to cursor when a selected element is hovered*/
+.cursor.expand::before {
+  opacity: 0;
+}
+
+/* ----------------------------
+
+  node styles
+
+--------------------------- */
+.node {
+  pointer-events: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: block;
+  /*styles applied for showing / hiding cursor - do not touch*/
+  transition: opacity 300ms linear;
+  opacity: 0;
+  /*element width*/
+  width: 32px;
+  height: 32px;
+}
+
+.node.moving {
+  opacity: 1;
+}
+
+.node::before {
+  content: ' ';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  border: 1px solid #b89d6f;
+  /*states and transitions animations*/
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  opacity: 1;
+  transition: opacity 300ms linear, border 300ms linear, background-color 300ms linear, -webkit-transform 300ms linear;
+  transition: opacity 300ms linear, transform 300ms linear, border 300ms linear, background-color 300ms linear;
+  transition: opacity 300ms linear, transform 300ms linear, border 300ms linear, background-color 300ms linear, -webkit-transform 300ms linear;
+}
+
+/* expand is the class you assigned with the plugin to cursor when a selected element is hovered*/
+.node.expand::before {
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  background-color: #b89d6f;
+  opacity: 0.2;
+}
+
+/*.node.reduce {
+    transform: scale(1);
+    background-color: #ffffff;
+}*/
+.hover__btn {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #b89d6f;
+  text-decoration: none;
+  outline: none;
+  text-transform: uppercase;
+  cursor: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .ui-helper-hidden-accessible {
@@ -657,8 +800,8 @@ a.button {
 
 @media all and (max-width: 767px) {
   .container {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 }
 
@@ -992,6 +1135,85 @@ a.button {
   position: fixed;
   left: 0;
   right: 0;
+  z-index: 999;
+  color: #fff;
+}
+
+.site-header__container {
+  padding: 2.6rem 1.5rem 3.6rem;
+}
+
+@media all and (min-width: 768px) {
+  .site-header__container {
+    padding: 4.6rem 6rem 5.6rem;
+    max-width: 144rem;
+    margin: 0 auto;
+  }
+}
+
+.site-header__grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header__title {
+  font-size: 2.4rem;
+  line-height: 1.167;
+  font-weight: bold;
+}
+
+.site-header__title > a {
+  color: #fff;
+}
+
+.mod_no-touchevents .site-header__title > a:hover, .mod_no-touchevents .site-header__title > a.hover {
+  color: #fff;
+}
+
+.mod_no-touchevents .site-header__title > a:hover, .mod_no-touchevents .site-header__title > a.hover {
+  opacity: 0.5;
+}
+
+@media all and (min-width: 768px) {
+  .site-header__navigate > ul {
+    display: flex;
+  }
+}
+
+.site-header__navigate > ul > li:not(:first-child) {
+  margin-left: 2.8rem;
+}
+
+.site-header__navigate > ul > li > a {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  transition: opacity 0.4s;
+}
+
+.mod_no-touchevents .site-header__navigate > ul > li > a:hover, .mod_no-touchevents .site-header__navigate > ul > li > a.hover {
+  color: #fff;
+}
+
+.mod_no-touchevents .site-header__navigate > ul > li > a:hover, .mod_no-touchevents .site-header__navigate > ul > li > a.hover {
+  opacity: 0.5;
+}
+
+@media all and (min-width: 768px) {
+  .site-header__navigate > ul > li > a:not(.is-current)::before {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: .2rem;
+    background: #fff;
+    content: "";
+  }
+}
+
+.site-header__navigate > ul > li > a.is-current {
+  opacity: .5;
+  pointer-events: none;
 }
 
 .site-footer {
@@ -1011,17 +1233,165 @@ a.button {
   }
 }
 
+@-webkit-keyframes open-menu {
+  0% {
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes open-menu {
+  0% {
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes close-menu {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes close-menu {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes shadow-animation {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shadow-animation {
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes shadow-close-animation {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes shadow-close-animation {
+  100% {
+    opacity: 0;
+  }
+}
+
+.right-menu-box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: none;
+}
+
+.right-menu-box.is-open {
+  display: block;
+}
+
+.right-menu-box.is-open + .menu-shadow {
+  display: block;
+  -webkit-animation: shadow-animation .45s ease-in 0s 1 alternate forwards;
+          animation: shadow-animation .45s ease-in 0s 1 alternate forwards;
+}
+
+.right-menu-box.is-open.is-close + .menu-shadow {
+  display: block;
+  opacity: 1;
+  -webkit-animation: shadow-close-animation .35s ease-out 0s 1 alternate forwards;
+          animation: shadow-close-animation .35s ease-out 0s 1 alternate forwards;
+}
+
+.menu-shadow {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  display: none;
+  z-index: 99;
+}
+
+.right-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  z-index: 103;
+  padding: 0 1.5rem 3.2rem 0;
+  width: 100vw;
+  background: #fff;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-animation: open-menu .2s linear .2s 1 alternate forwards;
+          animation: open-menu .2s linear .2s 1 alternate forwards;
+}
+
+.right-menu ul {
+  list-style-type: none;
+}
+
+.is-close .right-menu {
+  -webkit-animation: close-menu .2s linear 0s 1 alternate forwards;
+          animation: close-menu .2s linear 0s 1 alternate forwards;
+}
+
 .promo {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 8rem 0 4rem;
+  height: 50vh;
   text-align: center;
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #dbdbdb;
   color: #fff;
+}
+
+@media all and (min-width: 768px) {
+  .promo {
+    height: 70vh;
+  }
 }
 
 @media all and (min-width: 980px) {
@@ -1033,21 +1403,21 @@ a.button {
 }
 
 .promo__logo-box {
-  background: #fff;
-}
-
-@media all and (min-width: 768px) {
-  .promo__logo-box {
-    margin-bottom: 2.4rem;
-  }
+  margin-bottom: 2.4rem;
+  width: 18rem;
 }
 
 @media all and (min-width: 980px) {
   .promo__logo-box {
-    width: 30rem;
-    height: 35.2rem;
     margin-bottom: 4rem;
+    width: 30rem;
   }
+}
+
+.promo__logo-box > img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
 }
 
 .promo__header {
@@ -1059,10 +1429,18 @@ a.button {
   font-size: 5.2rem;
   line-height: 1;
   font-weight: 700;
+  margin-bottom: 2.4rem;
 }
 
 .promo__title a {
   text-decoration: none;
+}
+
+@media all and (max-width: 767px) {
+  .promo__title {
+    font-size: 3.8rem;
+    line-height: 1;
+  }
 }
 
 @media all and (min-width: 980px) {
@@ -1143,8 +1521,8 @@ a.button {
 
 @media all and (min-width: 768px) and (max-width: 767px) {
   .catalog__grid {
-    margin-right: -0.5rem;
-    margin-left: -0.5rem;
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
   }
 }
 
@@ -1184,8 +1562,8 @@ a.button {
 
 @media all and (min-width: 768px) and (max-width: 767px) {
   .catalog__col {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
   }
 }
 
@@ -1213,6 +1591,7 @@ a.button {
   transition: all 0s;
   display: block;
   color: inherit;
+  cursor: none;
 }
 
 .mod_no-touchevents .product-card > a:hover .product-card__title,

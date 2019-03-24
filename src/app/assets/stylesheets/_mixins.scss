@@ -241,6 +241,10 @@
     @include h;
     @include font(5.2rem);
 
+    @include mq(sm) {
+        @include font(3.8rem);
+    }
+
     font-weight: $font-weight;
 }
 

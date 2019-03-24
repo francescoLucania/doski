@@ -15,10 +15,28 @@
   <body>
     <div id="page-container">
       <header class="site-header">
-        <div class="container">
-          <p>Site header</p>
+        <div class="site-header__container">
+          <div class="site-header__grid">
+            <div class="site-header__item">
+              <h1 class="site-header__title"><a class="js-node-hover" href="#">Эпоксидный Пенни</a></h1>
+            </div>
+            <div class="site-header__item">
+              <nav class="site-header__navigate">
+                <ul>
+                  <li class="is-md"><a class="js-node-hover" href="#">Каталог</a></li>
+                  <li class="is-md"><a class="js-node-hover" href="#">О нас</a></li>
+                  <li class="is-md"><a class="js-node-hover is-current" href="#">Контакты</a></li>
+                  <li class="is-sm"><a class="js-node-hover js-open-right-menu" href="#">Меню</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
       </header>
+      <nav class="right-menu-box js-right-menu-box" role="navigation">
+        <div class="right-menu"></div>
+      </nav>
+      <div class="menu-shadow js-close-right-menu"></div>
       <main class="main">
         <div class="container"><br><br><br>
           <article>
@@ -324,7 +342,8 @@
       </footer>
     </div>
     <script src="js/vendor.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <!--script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js')-->
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/NodeCursor@331cecd/src/nodecursor-agnostic.js"></script>
     <script src="js/application.js"></script>
   </body>
 </html>

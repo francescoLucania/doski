@@ -1,2 +1,3 @@
-// $('.js-parallax-window').parallax();
-jarallax(document.querySelectorAll('.jarallax'));
+if (Modernizr.mq(mq.md.str)) {
+    jarallax(document.querySelectorAll('.jarallax'));
+}

@@ -6,6 +6,8 @@
 
 @import "mixins";
 
+@import "helpers";
+
 @import "styles";
 
 // jQuery UI
@@ -49,6 +51,8 @@
 @import "components/site_header";
 
 @import "components/site_footer";
+
+@import "components/right_menu";
 
 @import "components/promo";
 
