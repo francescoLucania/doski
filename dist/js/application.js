@@ -382,8 +382,8 @@ $(function () {
 var initCursor = new NodeCursor({
     cursor: true,
     node: true,
-    cursor_velocity: 1,
-    node_velocity: 0.35,
+    cursor_velocity: .8,
+    node_velocity: 0.25,
     native_cursor: 'none',
     element_to_hover: '.js-node-hover',
     cursor_class_hover: 'disable',

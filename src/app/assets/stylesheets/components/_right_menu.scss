@@ -82,8 +82,11 @@
     right: 0;
     transform: translateX(100%);
     z-index: 103;
-    padding: 0 map-get($mq-container-indents, 'sm') 3.2rem 0;
-    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6.4rem map-get($mq-container-indents, 'sm') 3.2rem 0;
+    width: 100%;
     background: #fff;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
     will-change: transform;
@@ -93,8 +96,23 @@
     -webkit-perspective: 1000;
     animation: open-menu .2s linear .2s 1 alternate forwards;
 
-    ul {
+    > ul {
         list-style-type: none; // for ie
+
+        > li {
+            &:not(:last-child) {
+                margin-bottom:  map_get($mq-container-indents, 'md');
+            }
+
+            > a {
+                @include font(3.2rem,4.2rem);
+
+                display: block;
+                text-align: center;
+                font-weight: 700;
+                color: $color-brand;
+            }
+        }
     }
 
     @include mq(sx) {
@@ -104,5 +122,20 @@
 
     .is-close & {
         animation: close-menu .2s linear 0s 1 alternate forwards;
+    }
+
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        padding: 2.4rem;
+
+        > .icon {
+            @include size(2.4rem);
+
+            fill: $color-brand;
+        }
     }
 }
