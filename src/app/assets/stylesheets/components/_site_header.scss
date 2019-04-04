@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .site-header {
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     z-index: 999;
@@ -25,9 +25,13 @@
     }
 
     &__title {
-        @include font(2.4rem, 2.8rem);
+        @include text-md;
 
         font-weight: bold;
+
+        @include mq(md) {
+            @include font(2.4rem, 2.8rem);
+        }
 
         > a {
             @include interact(color, #fff);

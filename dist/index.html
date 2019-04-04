@@ -49,7 +49,12 @@
       <main class="main">
         <div class="node" id="node"></div>
         <div class="cursor" id="cursor"></div>
-        <section class="promo jarallax" style="background-image: url(img/promo-1.jpg)">
+        <div class="loader js-loader">
+          <div class="loader__container">
+            <div class="loader__logo-box"><img src="img/logo-l.svg" alt=""></div>
+          </div>
+        </div>
+        <section class="promo jarallax js-promo" style="background-image: url(img/promo-1.jpg)">
           <div class="promo__logo-box"><img src="img/logo.svg" alt=""></div>
           <h1 class="promo__title">Эпоксидные доски Пенни&nbsp;Борд</h1>
           <h2 class="promo__description">Произведение искусства, но котором можно не только сидеть и трогать руками, <br class='is-md'>но и кататься по&nbsp;любимым&nbsp;местам</h2>
@@ -135,9 +140,21 @@
       </main>
       <footer class="site-footer">
         <div class="container">
-          <p>Site footer,
-            <script>document.write(new Date().getFullYear());</script>
-          </p>
+          <div class="site-footer__content">
+            <h4 class="site-footer__title">Мы в соцсетях</h4>
+            <p class="site-footer__content">Делаем не только доски Пенни Борд, но и многие другие приятные глазу вещи — стоит на это взглянуть.</p>
+            <ul class="contact-links">
+              <li><a class="js-node-hover" href="#" target="_blank"><img src="img/insta.svg" alt="instagram"></a></li>
+              <li><a class="js-node-hover" href="#" target="_blank">
+                  <svg class="icon" role="img" data-facebook>
+                    <use xlink:href="img/icons.svg#facebook"></use>
+                  </svg></a></li>
+              <li><a class="js-node-hover" href="#" target="_blank">
+                  <svg class="icon" role="img" data-whatsapp>
+                    <use xlink:href="img/icons.svg#whatsapp"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
         </div>
       </footer>
     </div>

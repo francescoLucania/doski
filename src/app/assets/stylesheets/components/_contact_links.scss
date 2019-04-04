@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+
+    > li {
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+
+        > a {
+            @include size(7rem);
+            @include interact(opacity, .9);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #fff;
+            transition: opacity $transition-duration-base;
+
+            > img,
+            > .icon {
+
+                &[data-facebook] {
+                    @include size(1.4rem, 2.8rem);
+                }
+
+                &[data-instagram],
+                &[data-whatsapp] {
+                    @include size(3.2rem);
+                }
+            }
+        }
+    }
+}

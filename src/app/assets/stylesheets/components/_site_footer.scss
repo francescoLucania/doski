@@ -4,11 +4,31 @@
     padding: 4rem 0;
     background: $color-brand-alt;
 
-    @include mq(lg) {
+    @include mq(md) {
         padding: 4rem 0 6rem;
     }
 
     @include mq(lg) {
-        padding: 6rem 0 8rem;
+        padding: 8rem 0 11rem;
+    }
+
+    &__content {
+        display: block;
+        margin: 0 auto;
+        max-width: 62rem;
+        text-align: center;
+        color: #fff;
+    }
+
+    &__title {
+        @include font(2.4rem, 3rem);
+
+        margin-bottom: 2rem;
+    }
+
+    &__description {
+        font-size: 1.9rem;
+        line-height: 1.58;
+        margin-bottom: 3rem;
     }
 }

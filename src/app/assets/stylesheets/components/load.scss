@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+// animations types
+
+@keyframes logo-animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-500%);
+    }
+}
+
+@keyframes loader-animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.loader {
+    @include size(100%);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    min-height: 50vh;
+    text-align: center;
+    background: #fff;
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+
+    @include mq(md) {
+        height: 100vh;
+    }
+
+    @include mq(lg) {
+        height: 100vh;
+        min-height: 70rem;
+        max-height: 80rem;
+    }
+
+    &.is-hide {
+        animation: loader-animation .4s linear 1.4s 1 alternate forwards;
+
+        @include mq(sm) {
+            animation: loader-animation .2s linear 1.4s 1 alternate forwards;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 8rem 0 4rem;
+        min-height: 50vh;
+
+        @include mq(md) {
+            height: 100vh;
+        }
+
+        @include mq(lg) {
+            height: 100vh;
+            min-height: 70rem;
+            max-height: 80rem;
+        }
+    }
+
+    &__logo-box {
+        margin: 0 auto;
+        width: 18rem;
+        will-change: transform;
+        backface-visibility: hidden;
+        perspective: 1000;
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+
+        @include mq(lg) {
+            margin-bottom: 4rem;
+            width: 30rem;
+        }
+
+        > img {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
+
+        .is-hide & {
+            animation: logo-animation .8s linear .6s 1 alternate forwards;
+
+            @include mq(sm) {
+                animation: logo-animation .4s linear .6s 1 alternate forwards;
+            }
+        }
+    }
+}

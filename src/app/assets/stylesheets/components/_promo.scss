@@ -1,5 +1,25 @@
 @charset "UTF-8";
 
+@keyframes promo-logo-animation {
+    0% {
+        transform: translateX(500%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes promo-content-animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .promo {
     display: flex;
     flex-direction: column;
@@ -8,6 +28,7 @@
     padding: 8rem 0 4rem;
     min-height: 50vh;
     text-align: center;
+    overflow: hidden;
     background: {
         position: 50%;
         size: cover;
@@ -29,6 +50,7 @@
     &__logo-box {
         margin-bottom: 2.4rem;
         width: 18rem;
+        transform: translateX(500%);
 
         @include mq(lg) {
             margin-bottom: 4rem;
@@ -40,6 +62,22 @@
             height: auto;
             vertical-align: top;
         }
+
+        .is-visible & {
+            animation: promo-logo-animation .8s linear 1.6s 1 alternate forwards;
+
+            @include mq(sm) {
+                animation: promo-logo-animation .4s linear 1.6s 1 alternate forwards;
+            }
+
+            + .promo__title {
+                animation: promo-content-animation .4s linear 2.6s 1 alternate forwards;
+            }
+
+            + .promo__title + .promo__description {
+                animation: promo-content-animation .4s linear 2.6s 1 alternate forwards;
+            }
+        }
     }
 
     &__header {
@@ -50,6 +88,7 @@
         @include h1;
 
         margin-bottom: 2.4rem;
+        opacity: 0;
 
         @include mq(lg) {
             margin-bottom: 3.2rem;
@@ -58,5 +97,7 @@
 
     &__description {
         @include text-lg;
+
+        opacity: 0;
     }
 }

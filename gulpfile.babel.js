@@ -18,6 +18,7 @@ import stylelint from 'gulp-stylelint';
 import uglify from 'gulp-uglify';
 import minifyCSS from 'postcss-clean';
 import validateHTML from 'posthtml-w3c';
+import zip from 'gulp-zip';
 
 // Config
 const config = require('./gulpfile.config.json');
@@ -161,6 +162,22 @@ export function lintScripts() {
         .pipe(gulp.dest(config.paths.scripts.dest));
 }
 
+// Minify js
+export function  minifyDistJs() {
+    return gulp.src('dist/js/*.js')
+        .pipe(uglify())
+        .pipe(concat('dist/js/*.js'))
+        .pipe(gulp.dest('dist/js/'));
+}
+
+// Minify css
+export function  minifyDistCss() {
+    return gulp.src('dist/css/*.css')
+        .pipe(cleanCSS({compatibility: 'ie11'}))
+        .pipe(gulp.dest('dist/css'));
+}
+
+
 // Tasks
 gulp.task('default', gulp.parallel(connectServer, watch));
 
@@ -169,3 +186,13 @@ export {build}
 
 const lint = gulp.parallel(lintViews, lintStyles, lintScripts);
 export {lint}
+
+// For prod tasks
+gulp.task('zip', () =>
+    gulp.src(['dist/**/*'], {base: './'})
+        .pipe(zip('archive.zip'))
+        .pipe(gulp.dest('zip/'))
+);
+
+const minifyDist = gulp.parallel(minifyDistJs, minifyDistCss);
+export {minifyDist}
