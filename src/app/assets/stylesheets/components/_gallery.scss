@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+@keyframes itemFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.gallery {
+    @include size(100%);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 999;
+    background: $color-minor-alt;
+
+    &.is-open {
+        transform: none;
+    }
+
+    &__slider-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+
+    &__slider {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: calc(100vh - 14.4rem);
+
+        @include mq(md) {
+            position: static !important; // overrides
+            width: calc(100vh - 15.4rem);
+        }
+
+
+        .slick-list {
+            max-height: 100%;
+        }
+
+        .slick-track {
+            display: flex;
+            align-items: center;
+            max-height: 100%;
+        }
+
+        .slick-slide {
+            display: block;
+            float: none;
+
+            @include mq(sm) {
+                width: 100vw !important;
+            }
+
+            > div {
+                display: block;
+            }
+        }
+
+        .slick-arrow {
+            @include size(3.2rem);
+            @include interact(opacity, .85);
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity $transition-duration-base;
+            outline: none;
+
+            @include mq(md) {
+                @include size(5rem);
+
+            }
+
+            @include mq(lg) {
+                @include size(5rem);
+
+                top: auto;
+                bottom: 3rem;
+                transform: none;
+            }
+
+            > img {
+                @include size(2.1rem)
+            }
+        }
+
+        .slick-prev {
+            left: 0;
+
+            @include mq(lg) {
+                left: 3rem;
+            }
+
+            > img {
+                transform: rotate(180deg);
+            }
+        }
+
+        .slick-next {
+            right: 0;
+
+            @include mq(lg) {
+                right: 3rem;
+            }
+        }
+    }
+
+    &__slider-item {
+        display: block; // overrides
+        width: 100%;
+        opacity: 0;
+
+        .slick-current & {
+            animation: itemFadeIn .4s linear .6s 1 alternate forwards;
+        }
+
+        @include mq(md) {
+            display: flex !important;  // overrides
+            justify-content: center;
+        }
+
+        @include mq(lg) {
+            height: auto;
+            vertical-align: top;
+        }
+
+        > img {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
+    }
+
+    &__footer {
+        position: relative;
+        z-index: 99;
+        margin-top: auto;
+        width: 100%;
+    }
+
+    &__product-card {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+
+        @include mq(md) {
+            margin-left: 3rem;
+            margin-right: 3rem;
+        }
+
+        @include mq(lg) {
+            width: 94rem;
+            min-width: 94rem;
+            margin: 0 auto;
+        }
+    }
+
+    &__product-card-item {
+        padding: 2rem 2.4rem 2.2rem;
+        border-top-left-radius: .8rem;
+        border-top-right-radius: .8rem;
+        background: #fff;
+        opacity: 0;
+
+        .slick-current & {
+            animation: itemFadeIn .4s linear .6s 1 alternate forwards;
+        }
+
+        @include mq(sm) {
+            text-align: center;
+        }
+
+        @include mq(md) {
+            display: flex !important;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3.5rem 4rem 2.9rem;
+        }
+
+        @include mq(lg) {
+            width: 94rem;
+            min-width: 94rem;
+            margin: 0 auto;
+        }
+    }
+
+    &__product-description {
+        > h3,
+        > p {
+            @include text-md;
+
+            font-weight: 700;
+        }
+    }
+
+    &__product-actions {
+        @include mq(md) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__product-price {
+        font-weight: 700;
+
+        @include mq(sm) {
+            margin-bottom: 1.6rem;
+        }
+
+        @include mq(md) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        padding: 2rem;
+
+        @include mq(md) {
+            padding: 2.8rem;
+        }
+
+        > .icon {
+            @include size(2rem);
+
+            fill: $color-base;
+        }
+    }
+}

@@ -37,16 +37,16 @@ block main
 
                     each val, index in [{name:'Черный Плэйграунд', price:'от 5000 ₽', url:'img/photo/bitmap@2x.jpg'},{name:'Карамельный Орех', price:'от 5000 ₽', url:'img/photo/bitmap-copy@2x.jpg'},{name:'Янтарная Берёза', price:'от 5000 ₽', url:'img/photo/bitmap-copy@2x.jpg'},{name:'Молочный Дуб', price:'от 5000 ₽', url:'img/photo/bitmap-copy-3@2x.jpg'},{name:'Гудронный Спрэй', price:'от 5000 ₽', url:'img/photo/bitmap-copy-4@2x.jpg'},{name:'Мятная Лиственница', price:'от 5000 ₽', url:'img/photo/bitmap-copy-5@2x.jpg'}]
 
-
                         .catalog__col
                             article.product-card
-                                a.js-node-hover(href='#')
+                                a.js-open-gallery.js-node-hover(href='#' data-index=index)
                                     .product-card__image
                                         img(src=val.url alt=val.name)
                                     .product-card__information
                                         .product-card__title
                                             span=val.name
                                         .product-card__price=val.price
+
 
     .promo.jarallax(style='background-image: url(img/Ferragamo_Holiday_2018_Fashionela-9.jpg)')
 
@@ -56,3 +56,6 @@ block main
                 p Меня зовут Артём. В моей бороде сила и мудрость моих предков. Мы с друзьями хотим, чтобы эпоксидная смола застывала без комочков и пузырей, заполняя все пустоты вашей души.
                 p Возьмите в руки наш Пенни Борд. Посмотрите, как лучи света застывают внутри смолы. Это ловушка для лета!
 
+
+
+    include components/_gallery

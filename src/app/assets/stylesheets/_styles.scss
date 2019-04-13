@@ -245,10 +245,18 @@ table {
 
     /*element width*/
 
+    .mod_touchevents & {
+        display: none !important;
+    }
+
 }
 
 .node.moving {
     opacity: 1;
+
+    .mod_touchevents & {
+        display: none !important;
+    }
 }
 
 .node::before {
@@ -269,6 +277,9 @@ table {
     -o-transition: opacity 300ms linear, transform 300ms linear, border 300ms linear, background-color 300ms linear;
     transition: opacity 300ms linear, transform 300ms linear, border 300ms linear, background-color 300ms linear;
 
+    .mod_touchevents & {
+        display: none !important;
+    }
 }
 
 /* expand is the class you assigned with the plugin to cursor when a selected element is hovered*/
@@ -277,7 +288,9 @@ table {
     background-color: $color-brand;
     opacity: 0.2;
 
-
+    .mod_touchevents & {
+        display: none !important;
+    }
 }
 
 /*.node.reduce {
@@ -303,4 +316,14 @@ table {
     -moz-transform : translate(-50%, -50%);
     -webkit-transform : translate(-50%, -50%);
     transform : translate(-50%, -50%);
+
+    .mod_touchevents & {
+        display: none !important;
+    }
+}
+
+.cursor {
+    .mod_touchevents & {
+        display: none !important;
+    }
 }

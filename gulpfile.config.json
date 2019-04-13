@@ -8,7 +8,8 @@
     "vendorStyles": {
       "src": [
         "node_modules/normalize.css/normalize.css",
-        "node_modules/jarallax/dist/jarallax.css"
+        "node_modules/jarallax/dist/jarallax.css",
+        "node_modules/slick-carousel/slick/slick.css"
       ],
       "concat": "vendor.css",
       "dest": "dist/css/"
@@ -24,7 +25,8 @@
         "node_modules/jquery-ui-dist/jquery-ui.js",
         "node_modules/fontfaceobserver/fontfaceobserver.js",
         "node_modules/svg4everybody/dist/svg4everybody.js",
-        "node_modules/jarallax/dist/jarallax.js"
+        "node_modules/jarallax/dist/jarallax.js",
+        "node_modules/slick-carousel/slick/slick.js"
       ],
       "concat": "vendor.js",
       "dest": "dist/js/"
@@ -43,6 +45,7 @@
         "src/app/assets/javascripts/components/loader.babel.js",
         "src/app/assets/javascripts/components/parallax.babel.js",
         "src/app/assets/javascripts/components/right-menu.babel.js",
+        "src/app/assets/javascripts/components/product-slider.babel.js",
         "src/app/assets/javascripts/components/cursor.babel.js"
       ],
       "watch": "src/app/assets/javascripts/**/*.js",

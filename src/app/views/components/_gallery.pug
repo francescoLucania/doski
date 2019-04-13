@@ -1,0 +1,24 @@
+.gallery.js-gallery-block
+    .gallery__slider-box
+        .gallery__slider.js-product-slider
+
+            each val, index in [{name:'Черный Плэйграунд', price:'от 5000 ₽', url:'img/photo/bitmap@2x.jpg'},{name:'Карамельный Орех', price:'от 5000 ₽', url:'img/photo/bitmap-copy@2x.jpg'},{name:'Янтарная Берёза', price:'от 5000 ₽', url:'img/photo/bitmap-copy@2x.jpg'},{name:'Молочный Дуб', price:'от 5000 ₽', url:'img/photo/bitmap-copy-3@2x.jpg'},{name:'Гудронный Спрэй', price:'от 5000 ₽', url:'img/photo/bitmap-copy-4@2x.jpg'},{name:'Мятная Лиственница', price:'от 5000 ₽', url:'img/photo/bitmap-copy-5@2x.jpg'}]
+
+                .gallery__slider-item
+                    img(src=val.url alt=val.name)
+
+        .gallery__footer
+            .gallery__product-card.js-product-slider-nav
+                each val, index in [{name:'Черный Плэйграунд', price:'от 5000 ₽', url:'img/photo/bitmap@2x.jpg'},{name:'Карамельный Орех', price:'от 5000 ₽', url:'img/photo/bitmap-copy@2x.jpg'},{name:'Янтарная Берёза', price:'от 5000 ₽', url:'img/photo/bitmap-copy@2x.jpg'},{name:'Молочный Дуб', price:'от 5000 ₽', url:'img/photo/bitmap-copy-3@2x.jpg'},{name:'Гудронный Спрэй', price:'от 5000 ₽', url:'img/photo/bitmap-copy-4@2x.jpg'},{name:'Мятная Лиственница', price:'от 5000 ₽', url:'img/photo/bitmap-copy-5@2x.jpg'}]
+
+                    .gallery__product-card-item
+                        .gallery__product-description
+                            h3 Пенни Борд
+                            p=val.name
+                        .gallery__product-actions
+                            .gallery__product-price=val.price
+                            a.button(href='#') заказать
+
+    a.gallery__close.js-close-gallery.js-node-hover
+        svg.icon.icon--20(role='img')
+            use(xlink:href='img/icons.svg#close')

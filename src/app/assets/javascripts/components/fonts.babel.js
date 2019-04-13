@@ -1,12 +1,20 @@
 if (enable.components.fonts === true) {
 
     if (enable.components.fontsRubleSans === true) {
-        const fontALSRublArial = new FontFaceObserver('TTNormsRegular');
+        const fontRegular = new FontFaceObserver('TTNormsRegular');
 
-        fontALSRublArial
+        const fontBold = new FontFaceObserver('TTNormsBold');
+
+        fontBold
             .load()
             .then(function () {
-                console.log('TTNorms');
+                console.log('TTNormsRegular');
+            });
+
+        fontRegular
+            .load()
+            .then(function () {
+                console.log('TTNormsBold');
             });
     }
 
