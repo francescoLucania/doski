@@ -60,7 +60,18 @@ $(function () {
         asNavFor: '.js-product-slider',
         arrows: false,
         dots: false,
-        focusOnSelect: true,
-        variableWidth: true
+        focusOnSelect: true
+    });
+
+    $(document).on('click', '.js-order-gallery', function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
+        $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 400);
+
+        setTimeout(function () {
+            closeGallery();
+        }, 1000);
+
+        return false;
     });
 });

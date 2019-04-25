@@ -7,6 +7,15 @@
     z-index: 999;
     color: #fff;
 
+    &--bg {
+        position: relative;
+        background: {
+            position: 50%;
+            size: cover;
+            repeat: no-repeat;
+        };
+    }
+
     &__container {
         padding: 2.6rem map_get($mq-container-indents, 'sm') 3.6rem;
 

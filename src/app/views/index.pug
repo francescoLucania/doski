@@ -16,11 +16,15 @@ block main
         .promo__logo-box
             img(src='img/logo.svg' alt='')
         h1.promo__title Эпоксидные доски Пенни&nbsp;Борд
-        h2.promo__description Произведение искусства, но котором можно не только сидеть и трогать руками, <br class='is-md'>но и кататься по&nbsp;любимым&nbsp;местам
+        p.promo__description Произведение искусства, но котором можно не только сидеть и трогать руками, <br class='is-md'>но и кататься по&nbsp;любимым&nbsp;местам
 
     .section
         .container
             .page-about
+                .page-about__logo
+                    svg.icon(role='img')
+                        use(xlink:href='img/icons.svg#board')
+
                 p Мы занимаемся изготовлением досок с применением эпоксидных смол. Отличительная черта — яркий сочный дизайн, который ставит на паузу всех, кто катается рядом — они разглядывают ваш Пенни.
                 p В качестве сырья мы используем берёзу, орех, ольху, клён. Эпоксидная смола Graffsmith & Paper, колеры Syntacolor.
 
@@ -53,9 +57,39 @@ block main
     .section
         .container
             .page-about
+                .page-about__logo
+                    svg.icon(role='img')
+                        use(xlink:href='img/icons.svg#board')
+
                 p Меня зовут Артём. В моей бороде сила и мудрость моих предков. Мы с друзьями хотим, чтобы эпоксидная смола застывала без комочков и пузырей, заполняя все пустоты вашей души.
                 p Возьмите в руки наш Пенни Борд. Посмотрите, как лучи света застывают внутри смолы. Это ловушка для лета!
 
+    .section.section--contacts#order-form
+        .container
+            form.contact-form(action='#')
+                .contact-form__header
+                    h4.contact-form__title Напишите нам
+                    p.contact-form__description Мы хотим сотрудничать с ритейлерами-ротвейлерами и небольшими магазинами. Даже если вы хотите купить одну доску или просто посмотреть на них вживую — напишите нам и мы с радостью вам поможем!
+
+                .contact-form__body
+
+                    .input
+                        input(type='name' placeholder='Имя')
+
+                    .input
+                        input(type='phone' placeholder='Телефон')
+
+                    .input
+                        input(type='email' placeholder='E-mail')
+
+                    .textarea
+                        .textarea
+                            textarea(placeholder='Ваше сообщение')
+
+                    .input
+                        button.button.button--block.js-node-hover отправить
+
+                    p Нажимаю на кнопку "отправить" - вы соглашаетесь на обработку персональных данных
 
 
     include components/_gallery

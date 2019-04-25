@@ -1,0 +1,21 @@
+extends layouts/application_bg_header.pug
+
+block title
+    title Index
+
+block main
+    #node.node
+    #cursor.cursor
+    section.section
+        .container
+            .section__header
+                h2.section__title Наши контакты
+
+            .contacts
+                .contacts__grid
+                    a.contacts__item(href='tel:89001234567') Телефон: +7 900 123 45 67
+                    .contacts__logo
+                        svg.icon(role='img')
+                            use(xlink:href='img/icons.svg#board')
+                    a.contacts__item(href='mailto:epoxypenny@ya.ru') Почта: epoxypenny@ya.ru
+

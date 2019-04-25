@@ -206,28 +206,12 @@ if (enable.jQueryUI.selectmenu === true) {
 if (enable.components.fonts === true) {
 
     if (enable.components.fontsRubleSans === true) {
-        var fontRegular = new FontFaceObserver('TTNormsRegular');
+        var fontBase = new FontFaceObserver('Montserrat');
 
-        var fontBold = new FontFaceObserver('TTNormsBold');
-
-        fontBold.load().then(function () {
-            console.log('TTNormsRegular');
-        });
-
-        fontRegular.load().then(function () {
-            console.log('TTNormsBold');
+        fontBase.load().then(function () {
+            console.log('Montserrat');
         });
     }
-
-    // if (enable.components.fontsRubleSerif === true) {
-    //     const fontALSRublTimes = new FontFaceObserver('ALSRubl-Times');
-    //
-    //     fontALSRublTimes
-    //         .load()
-    //         .then(function () {
-    //             console.log('ALSRubl-Times has loaded.');
-    //         });
-    // }
 }
 "use strict";
 
@@ -387,8 +371,19 @@ $(function () {
         asNavFor: '.js-product-slider',
         arrows: false,
         dots: false,
-        focusOnSelect: true,
-        variableWidth: true
+        focusOnSelect: true
+    });
+
+    $(document).on('click', '.js-order-gallery', function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
+        $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 400);
+
+        setTimeout(function () {
+            closeGallery();
+        }, 1000);
+
+        return false;
     });
 });
 'use strict';

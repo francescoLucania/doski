@@ -21,9 +21,31 @@
         color: $color-brand;
     }
 
-    &__description {
+    &__description,
+    &__content {
         @include text-lg;
 
         margin-top: 3rem;
+
+        > p {
+            &:not(:first-child) {
+                margin-top: 3rem;
+            }
+        }
+    }
+
+    &--contacts {
+        padding-top: 6rem;
+        padding-bottom: 0;
+        background: $color-minor;
+
+        @include mq(md) {
+            padding-top: 8rem;
+            padding-bottom: 0;
+        }
+
+        @include mq(lg) {
+            padding-bottom: 0;
+        }
     }
 }

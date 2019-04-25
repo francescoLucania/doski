@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+.contact-form {
+    padding: 2rem 1.5rem;
+    border-radius: $border-radius-base;
+    background: #fff;
+
+    @include mq(md) {
+        padding: 4rem;
+        margin: 0 1.5rem;
+    }
+
+    @include mq(lg) {
+        margin: 0 auto;
+        padding: 8rem;
+        width: 78rem;
+    }
+
+    &__header {
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    &__title {
+        @include h2;
+
+        margin-bottom: 2.6rem;
+        color: $color-brand;
+    }
+
+    &__description {
+        @include text-md;
+    }
+
+    &__body {
+        > .input,
+        > .textarea {
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

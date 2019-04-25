@@ -39,6 +39,19 @@
             <li><a href="#">Каталог</a></li>
             <li><a href="#">О нас</a></li>
             <li><a href="#">Контакты</a></li>
+            <li>
+              <ul class="contact-links">
+                <li><a class="js-node-hover" href="#" target="_blank"><img src="img/insta.svg" alt="instagram"></a></li>
+                <li><a class="js-node-hover" href="#" target="_blank">
+                    <svg class="icon" role="img" data-facebook>
+                      <use xlink:href="img/icons.svg#facebook"></use>
+                    </svg></a></li>
+                <li><a class="js-node-hover" href="#" target="_blank">
+                    <svg class="icon" role="img" data-whatsapp>
+                      <use xlink:href="img/icons.svg#whatsapp"></use>
+                    </svg></a></li>
+              </ul>
+            </li>
           </ul><a class="right-menu__close js-close-right-menu">
             <svg class="icon icon--20" role="img">
               <use xlink:href="img/icons.svg#close"></use>
@@ -57,11 +70,16 @@
         <section class="promo jarallax js-promo" style="background-image: url(img/promo-1.jpg)">
           <div class="promo__logo-box"><img src="img/logo.svg" alt=""></div>
           <h1 class="promo__title">Эпоксидные доски Пенни&nbsp;Борд</h1>
-          <h2 class="promo__description">Произведение искусства, но котором можно не только сидеть и трогать руками, <br class='is-md'>но и кататься по&nbsp;любимым&nbsp;местам</h2>
+          <p class="promo__description">Произведение искусства, но котором можно не только сидеть и трогать руками, <br class='is-md'>но и кататься по&nbsp;любимым&nbsp;местам</p>
         </section>
         <div class="section">
           <div class="container">
             <div class="page-about">
+              <div class="page-about__logo">
+                <svg class="icon" role="img">
+                  <use xlink:href="img/icons.svg#board"></use>
+                </svg>
+              </div>
               <p>Мы занимаемся изготовлением досок с применением эпоксидных смол. Отличительная черта — яркий сочный дизайн, который ставит на паузу всех, кто катается рядом — они разглядывают ваш Пенни.</p>
               <p>В качестве сырья мы используем берёзу, орех, ольху, клён. Эпоксидная смола Graffsmith & Paper, колеры Syntacolor.</p>
             </div>
@@ -132,9 +150,44 @@
         <div class="section">
           <div class="container">
             <div class="page-about">
+              <div class="page-about__logo">
+                <svg class="icon" role="img">
+                  <use xlink:href="img/icons.svg#board"></use>
+                </svg>
+              </div>
               <p>Меня зовут Артём. В моей бороде сила и мудрость моих предков. Мы с друзьями хотим, чтобы эпоксидная смола застывала без комочков и пузырей, заполняя все пустоты вашей души.</p>
               <p>Возьмите в руки наш Пенни Борд. Посмотрите, как лучи света застывают внутри смолы. Это ловушка для лета!</p>
             </div>
+          </div>
+        </div>
+        <div class="section section--contacts" id="order-form">
+          <div class="container">
+            <form class="contact-form" action="#">
+              <div class="contact-form__header">
+                <h4 class="contact-form__title">Напишите нам</h4>
+                <p class="contact-form__description">Мы хотим сотрудничать с ритейлерами-ротвейлерами и небольшими магазинами. Даже если вы хотите купить одну доску или просто посмотреть на них вживую — напишите нам и мы с радостью вам поможем!</p>
+              </div>
+              <div class="contact-form__body">
+                <div class="input">
+                  <input type="name" placeholder="Имя">
+                </div>
+                <div class="input">
+                  <input type="phone" placeholder="Телефон">
+                </div>
+                <div class="input">
+                  <input type="email" placeholder="E-mail">
+                </div>
+                <div class="textarea">
+                  <div class="textarea">
+                    <textarea placeholder="Ваше сообщение"></textarea>
+                  </div>
+                </div>
+                <div class="input">
+                  <button class="button button--block js-node-hover">отправить</button>
+                </div>
+                <p>Нажимаю на кнопку "отправить" - вы соглашаетесь на обработку персональных данных</p>
+              </div>
+            </form>
           </div>
         </div>
         <div class="gallery js-gallery-block">
@@ -149,63 +202,63 @@
             </div>
             <div class="gallery__footer">
               <div class="gallery__product-card js-product-slider-nav">
-                <div class="gallery__product-card-item">
+                <div class="gallery__product-card-item" data-id="0">
                   <div class="gallery__product-description">
                     <h3>Пенни Борд</h3>
                     <p>Черный Плэйграунд</p>
                   </div>
                   <div class="gallery__product-actions">
-                    <div class="gallery__product-price">от 5000 ₽</div><a class="button" href="#">заказать</a>
+                    <div class="gallery__product-price">от 5000 ₽</div><a class="button js-node-hover js-order-gallery" href="#order-form">заказать</a>
                   </div>
                 </div>
-                <div class="gallery__product-card-item">
+                <div class="gallery__product-card-item" data-id="1">
                   <div class="gallery__product-description">
                     <h3>Пенни Борд</h3>
                     <p>Карамельный Орех</p>
                   </div>
                   <div class="gallery__product-actions">
-                    <div class="gallery__product-price">от 5000 ₽</div><a class="button" href="#">заказать</a>
+                    <div class="gallery__product-price">от 5000 ₽</div><a class="button js-node-hover js-order-gallery" href="#order-form">заказать</a>
                   </div>
                 </div>
-                <div class="gallery__product-card-item">
+                <div class="gallery__product-card-item" data-id="2">
                   <div class="gallery__product-description">
                     <h3>Пенни Борд</h3>
                     <p>Янтарная Берёза</p>
                   </div>
                   <div class="gallery__product-actions">
-                    <div class="gallery__product-price">от 5000 ₽</div><a class="button" href="#">заказать</a>
+                    <div class="gallery__product-price">от 5000 ₽</div><a class="button js-node-hover js-order-gallery" href="#order-form">заказать</a>
                   </div>
                 </div>
-                <div class="gallery__product-card-item">
+                <div class="gallery__product-card-item" data-id="3">
                   <div class="gallery__product-description">
                     <h3>Пенни Борд</h3>
                     <p>Молочный Дуб</p>
                   </div>
                   <div class="gallery__product-actions">
-                    <div class="gallery__product-price">от 5000 ₽</div><a class="button" href="#">заказать</a>
+                    <div class="gallery__product-price">от 5000 ₽</div><a class="button js-node-hover js-order-gallery" href="#order-form">заказать</a>
                   </div>
                 </div>
-                <div class="gallery__product-card-item">
+                <div class="gallery__product-card-item" data-id="4">
                   <div class="gallery__product-description">
                     <h3>Пенни Борд</h3>
                     <p>Гудронный Спрэй</p>
                   </div>
                   <div class="gallery__product-actions">
-                    <div class="gallery__product-price">от 5000 ₽</div><a class="button" href="#">заказать</a>
+                    <div class="gallery__product-price">от 5000 ₽</div><a class="button js-node-hover js-order-gallery" href="#order-form">заказать</a>
                   </div>
                 </div>
-                <div class="gallery__product-card-item">
+                <div class="gallery__product-card-item" data-id="5">
                   <div class="gallery__product-description">
                     <h3>Пенни Борд</h3>
                     <p>Мятная Лиственница</p>
                   </div>
                   <div class="gallery__product-actions">
-                    <div class="gallery__product-price">от 5000 ₽</div><a class="button" href="#">заказать</a>
+                    <div class="gallery__product-price">от 5000 ₽</div><a class="button js-node-hover js-order-gallery" href="#order-form">заказать</a>
                   </div>
                 </div>
               </div>
             </div>
-          </div><a class="gallery__close js-close-gallery js-node-hover">
+          </div><a class="gallery__close js-order-gallery js-node-hover">
             <svg class="icon icon--20" role="img">
               <use xlink:href="img/icons.svg#close"></use>
             </svg></a>

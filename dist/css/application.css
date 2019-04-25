@@ -1,11 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700");
 .text-lg {
   font-size: 2.4rem;
   line-height: 1.46;
 }
 
 .text-md {
-  font-size: 1.9rem;
-  line-height: 1.58;
+  font-size: 2.4rem;
+  line-height: 1.46;
 }
 
 .text-sm {
@@ -54,12 +55,12 @@ html.mod_flexboxtweener {
 }
 
 body {
-  font-size: 1.9rem;
-  line-height: 1.58;
+  font-size: 2.4rem;
+  line-height: 1.46;
   min-height: 100vh;
   background: #fff;
   color: #6e7483;
-  font-family: TTNormsRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   height: auto !important;
 }
@@ -123,10 +124,10 @@ textarea {
 }
 
 h1 {
-  font-family: TTNormsRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 5.2rem;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -142,10 +143,10 @@ h1 a {
 }
 
 h2 {
-  font-family: TTNormsRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 4rem;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h2 a {
@@ -155,14 +156,14 @@ h2 a {
 h3 {
   font-size: 2.4rem;
   line-height: 1.25;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h4 {
-  font-family: TTNormsRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.9rem;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h4 a {
@@ -170,10 +171,10 @@ h4 a {
 }
 
 h5 {
-  font-family: TTNormsRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.4rem;
   line-height: 1.46;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h5 a {
@@ -181,10 +182,10 @@ h5 a {
 }
 
 h6 {
-  font-family: TTNormsRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.9rem;
-  line-height: 1.58;
-  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.46;
+  font-weight: 500;
 }
 
 h6 a {
@@ -582,24 +583,26 @@ a.button {
 .input > input {
   display: block;
   width: 100%;
-  padding: .5rem .75rem;
-  border: 1px solid #dbdbdb;
+  padding: .8rem 1.5rem 1.2rem;
+  border-radius: 0.5rem;
+  border: solid 1px #dbdbdb;
+  outline: none;
 }
 
 .input > input::-webkit-input-placeholder {
-  color: #dbdbdb;
+  color: #6e7483;
 }
 
 .input > input::-moz-placeholder {
-  color: #dbdbdb;
+  color: #6e7483;
 }
 
 .input > input:-ms-input-placeholder {
-  color: #dbdbdb;
+  color: #6e7483;
 }
 
 .input > input:-moz-placeholder {
-  color: #dbdbdb;
+  color: #6e7483;
 }
 
 .input > input:disabled {
@@ -647,24 +650,27 @@ a.button {
 .textarea > textarea {
   display: block;
   width: 100%;
-  padding: .5rem .75rem;
+  padding: .8rem 1.5rem 1.2rem;
+  min-height: 20rem;
+  border-radius: 0.5rem;
   border: 1px solid #dbdbdb;
+  outline: none;
 }
 
 .textarea > textarea::-webkit-input-placeholder {
-  color: #dbdbdb;
+  color: #6e7483;
 }
 
 .textarea > textarea::-moz-placeholder {
-  color: #dbdbdb;
+  color: #6e7483;
 }
 
 .textarea > textarea:-ms-input-placeholder {
-  color: #dbdbdb;
+  color: #6e7483;
 }
 
 .textarea > textarea:-moz-placeholder {
-  color: #dbdbdb;
+  color: #6e7483;
 }
 
 .textarea > textarea:disabled {
@@ -855,93 +861,6 @@ a.button {
   }
 }
 
-@font-face {
-  src: url("../fonts/TTNorms/TTFirsNeue-Regular.woff") format("woff");
-  font-family: TTNormsRegular;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  src: url("../fonts/TTNorms/TTFirsNeue-Bold.woff") format("woff");
-  font-family: TTNormsBold;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  src: url("../fonts/TTNorms/TTFirsNeue-Black.woff") format("woff");
-  font-family: TTNormsBlack;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  src: url("../fonts/rub/arial/alsrubl-arial-regular.woff") format("woff");
-  font-family: ALSRubl-Arial;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  src: url("../fonts/rub/arial/alsrubl-arial-italic.woff") format("woff");
-  font-family: ALSRubl-Arial;
-  font-style: italic;
-  font-weight: 400;
-}
-
-@font-face {
-  src: url("../fonts/rub/arial/alsrubl-arial-bold.woff") format("woff");
-  font-family: ALSRubl-Arial;
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  src: url("../fonts/rub/arial/alsrubl-arial-bolditalic.woff") format("woff");
-  font-family: ALSRubl-Arial;
-  font-style: italic;
-  font-weight: 700;
-}
-
-.rub-sans {
-  font-family: ALSRubl-Arial, Arial, sans-serif;
-  line-height: normal;
-}
-
-@font-face {
-  src: url("../fonts/rub/times/alsrubl-times-regular.woff") format("woff");
-  font-family: ALSRubl-Times;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  src: url("../fonts/rub/times/alsrubl-times-italic.woff") format("woff");
-  font-family: ALSRubl-Times;
-  font-style: italic;
-  font-weight: 400;
-}
-
-@font-face {
-  src: url("../fonts/rub/times/alsrubl-times-bold.woff") format("woff");
-  font-family: ALSRubl-Times;
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  src: url("../fonts/rub/times/alsrubl-times-bolditalic.woff") format("woff");
-  font-family: ALSRubl-Times;
-  font-style: italic;
-  font-weight: 700;
-}
-
-.rub-serif {
-  font-family: ALSRubl-Times, "Times New Roman", Times, serif;
-  line-height: normal;
-}
-
 .icon {
   fill: #6e7483;
   fill-rule: evenodd;
@@ -1046,7 +965,7 @@ a.button {
 
 .wysiwyg > dl > dt {
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .wysiwyg > ol {
@@ -1175,6 +1094,13 @@ a.button {
   color: #fff;
 }
 
+.site-header--bg {
+  position: relative;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .site-header__container {
   padding: 2.6rem 1.5rem 3.6rem;
 }
@@ -1194,8 +1120,8 @@ a.button {
 }
 
 .site-header__title {
-  font-size: 1.9rem;
-  line-height: 1.58;
+  font-size: 2.4rem;
+  line-height: 1.46;
   font-weight: bold;
 }
 
@@ -1583,10 +1509,10 @@ a.button {
 }
 
 .promo__title {
-  font-family: TTNormsRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 5.2rem;
   line-height: 1;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 2.4rem;
   opacity: 0;
 }
@@ -1635,10 +1561,10 @@ a.button {
 }
 
 .section__title {
-  font-family: TTNormsRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 4rem;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 500;
   color: #b89d6f;
 }
 
@@ -1646,14 +1572,49 @@ a.button {
   text-decoration: none;
 }
 
-.section__description {
+.section__description, .section__content {
   font-size: 2.4rem;
   line-height: 1.46;
   margin-top: 3rem;
 }
 
+.section__description > p:not(:first-child), .section__content > p:not(:first-child) {
+  margin-top: 3rem;
+}
+
+.section--contacts {
+  padding-top: 6rem;
+  padding-bottom: 0;
+  background: #dbdbdb;
+}
+
+@media all and (min-width: 768px) {
+  .section--contacts {
+    padding-top: 8rem;
+    padding-bottom: 0;
+  }
+}
+
+@media all and (min-width: 1180px) {
+  .section--contacts {
+    padding-bottom: 0;
+  }
+}
+
 .page-about {
   text-align: center;
+}
+
+.page-about__logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.6rem;
+}
+
+.page-about__logo > .icon {
+  width: 6.4rem;
+  height: 2.4rem;
+  fill: #b89d6f;
 }
 
 .page-about > p {
@@ -1801,8 +1762,8 @@ a.button {
 }
 
 .product-card__price {
-  font-size: 1.9rem;
-  line-height: 1.58;
+  font-size: 2.4rem;
+  line-height: 1.46;
   transition: color 0.4s;
 }
 
@@ -2178,12 +2139,14 @@ a.button {
 .gallery__product-card {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  width: calc(100% - 3rem);
 }
 
 @media all and (min-width: 768px) {
   .gallery__product-card {
     margin-left: 3rem;
     margin-right: 3rem;
+    width: calc(100% - 6rem);
   }
 }
 
@@ -2233,8 +2196,8 @@ a.button {
 
 .gallery__product-description > h3,
 .gallery__product-description > p {
-  font-size: 1.9rem;
-  line-height: 1.58;
+  font-size: 2.4rem;
+  line-height: 1.46;
   font-weight: 700;
 }
 
@@ -2279,4 +2242,95 @@ a.button {
   width: 2rem;
   height: 2rem;
   fill: #6e7483;
+}
+
+.contacts {
+  margin-top: 4rem;
+}
+
+@media all and (min-width: 768px) {
+  .contacts__grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.contacts__item {
+  font-size: 2.4rem;
+  line-height: 1.46;
+  display: block;
+}
+
+@media all and (max-width: 767px) {
+  .contacts__item {
+    text-align: center;
+  }
+}
+
+.contacts__logo {
+  width: 6.4rem;
+  height: 2.4rem;
+  margin: 2.4rem auto;
+}
+
+@media all and (min-width: 768px) {
+  .contacts__logo {
+    margin: 0 5.6rem;
+  }
+}
+
+.contacts__logo > .icon {
+  width: 6.4rem;
+  height: 2.4rem;
+  fill: #b89d6f;
+}
+
+.contact-form {
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+@media all and (min-width: 768px) {
+  .contact-form {
+    padding: 4rem;
+    margin: 0 1.5rem;
+  }
+}
+
+@media all and (min-width: 1180px) {
+  .contact-form {
+    margin: 0 auto;
+    padding: 8rem;
+    width: 78rem;
+  }
+}
+
+.contact-form__header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.contact-form__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 500;
+  margin-bottom: 2.6rem;
+  color: #b89d6f;
+}
+
+.contact-form__title a {
+  text-decoration: none;
+}
+
+.contact-form__description {
+  font-size: 2.4rem;
+  line-height: 1.46;
+}
+
+.contact-form__body > .input:not(:last-child),
+.contact-form__body > .textarea:not(:last-child) {
+  margin-bottom: 2rem;
 }

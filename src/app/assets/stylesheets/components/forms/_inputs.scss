@@ -3,12 +3,14 @@
 @if $enable-inputs == true {
     .input {
         > input {
-            @include placeholder;
+            @include placeholder($color-base);
 
             display: block;
             width: 100%;
-            padding: .5rem .75rem;
-            border: 1px solid $color-minor;
+            padding: .8rem 1.5rem 1.2rem;
+            border-radius: $border-radius-base;
+            border: solid 1px $color-minor;
+            outline: none;
 
             &:disabled {
                 opacity: .2;

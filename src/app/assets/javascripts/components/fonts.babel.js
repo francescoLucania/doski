@@ -1,31 +1,12 @@
 if (enable.components.fonts === true) {
 
     if (enable.components.fontsRubleSans === true) {
-        const fontRegular = new FontFaceObserver('TTNormsRegular');
+        const fontBase = new FontFaceObserver('Montserrat');
 
-        const fontBold = new FontFaceObserver('TTNormsBold');
-
-        fontBold
+        fontBase
             .load()
             .then(function () {
-                console.log('TTNormsRegular');
-            });
-
-        fontRegular
-            .load()
-            .then(function () {
-                console.log('TTNormsBold');
+                console.log('Montserrat');
             });
     }
-
-    // if (enable.components.fontsRubleSerif === true) {
-    //     const fontALSRublTimes = new FontFaceObserver('ALSRubl-Times');
-    //
-    //     fontALSRublTimes
-    //         .load()
-    //         .then(function () {
-    //             console.log('ALSRubl-Times has loaded.');
-    //         });
-    // }
-
 }

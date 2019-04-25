@@ -85,7 +85,7 @@
     }
 
     &__title {
-        @include h1(400);
+        @include h1();
 
         margin-bottom: 2.4rem;
         opacity: 0;

@@ -4,18 +4,4 @@ footer.site-footer
             h4.site-footer__title Мы в соцсетях
             p.site-footer__content Делаем не только доски Пенни Борд, но и многие другие приятные глазу вещи — стоит на это взглянуть.
 
-            ul.contact-links
-
-                li
-                    a.js-node-hover(href='#' target='_blank')
-                        img(src='img/insta.svg' alt='instagram')
-
-                li
-                    a.js-node-hover(href='#' target='_blank')
-                        svg.icon(role='img' data-facebook)
-                            use(xlink:href='img/icons.svg#facebook')
-
-                li
-                    a.js-node-hover(href='#' target='_blank')
-                        svg.icon(role='img' data-whatsapp)
-                            use(xlink:href='img/icons.svg#whatsapp')
+            include _contact_links.pug

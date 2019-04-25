@@ -3,6 +3,18 @@
 .page-about {
     text-align: center;
 
+    &__logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3.6rem;
+
+        > .icon {
+            @include size(6.4rem, 2.4rem);
+
+            fill: $color-brand;
+        }
+    }
+
     > p {
         @include text-lg;
 

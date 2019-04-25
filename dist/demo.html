@@ -39,6 +39,19 @@
             <li><a href="#">Каталог</a></li>
             <li><a href="#">О нас</a></li>
             <li><a href="#">Контакты</a></li>
+            <li>
+              <ul class="contact-links">
+                <li><a class="js-node-hover" href="#" target="_blank"><img src="img/insta.svg" alt="instagram"></a></li>
+                <li><a class="js-node-hover" href="#" target="_blank">
+                    <svg class="icon" role="img" data-facebook>
+                      <use xlink:href="img/icons.svg#facebook"></use>
+                    </svg></a></li>
+                <li><a class="js-node-hover" href="#" target="_blank">
+                    <svg class="icon" role="img" data-whatsapp>
+                      <use xlink:href="img/icons.svg#whatsapp"></use>
+                    </svg></a></li>
+              </ul>
+            </li>
           </ul><a class="right-menu__close js-close-right-menu">
             <svg class="icon icon--20" role="img">
               <use xlink:href="img/icons.svg#close"></use>
@@ -49,297 +62,361 @@
       <main class="main">
         <div class="container"><br><br><br>
           <article>
-            <h3>Typography</h3><br>
-            <h1>Эпоксидные доски Пенни Борд</h1><br>
-            <h2>Эпоксидные доски Пенни Борд</h2><br>
-            <h3>Эпоксидные доски Пенни Борд</h3><br>
-            <h4>Эпоксидные доски Пенни Борд</h4><br>
+            <h3>Pages</h3><br><br><a href="index.html">Главная</a><br><a href="about.html">О нас</a><br><a href="contacts.html">Контакты</a><br><br><br>
+            <!--h3 Typography-->
+            <!--br-->
+            <!---->
+            <!--h1 Эпоксидные доски Пенни Борд-->
+            <!--br-->
+            <!--h2 Эпоксидные доски Пенни Борд-->
+            <!--br-->
+            <!--h3 Эпоксидные доски Пенни Борд-->
+            <!--br-->
+            <!--h4 Эпоксидные доски Пенни Борд-->
+            <!--br-->
             <!--h5 Heading 5-->
             <!--br-->
             <!--h6 Heading 6-->
             <!--br-->
-            <p>Черный Плэйграунд</p>
-            <p><small>Черный Плэйграунд</small></p>
-          </article><br><br><br>
-          <article>
-            <h3>Links</h3><br>
-            <h6><a href="#">Heading link</a></h6><br>
-            <p><a href="#">Link</a></p><br>
-            <p><a class="link link--current" href="#">Link current</a></p><br>
-            <p><a href="#" style="display: inline-flex; align-items: center;">
-                <svg class="icon icon--20" role="img">
-                  <use xlink:href="img/icons.svg#icon-check"></use>
-                </svg>Link with icon</a></p><br>
-            <p><a class="link link--pseudo" href="#">Pseudo link</a></p><br>
-            <p><a class="link link--pseudo" href="#" style="display: inline-flex; align-items: center;">
-                <svg class="icon icon--20" role="img">
-                  <use xlink:href="img/icons.svg#icon-check"></use>
-                </svg>Pseudo link with icon</a></p>
-          </article><br><br><br>
-          <article>
-            <h3>Icons</h3><br>
-            <p>
-              <svg class="icon icon--20" role="img">
-                <use xlink:href="img/icons.svg#icon-check"></use>
-              </svg>
-            </p>
-          </article><br><br><br>
-          <article>
-            <h3>Rub sign</h3><br>
-            <h6>Sans</h6>
-            <p>1&nbsp;000&nbsp;000&nbsp;<span class='rub-sans'>Р</span></p><br><br>
-            <h6>Serif</h6>
-            <p>1&nbsp;000&nbsp;000&nbsp;<span class='rub-serif'>Р</span></p>
-          </article><br><br><br>
-          <article>
-            <h3>Forms</h3><br>
-            <section>
-              <h5>Buttons</h5><br>
-              <div style="width: 280px;">
-                <p>
-                  <button class="button" type="button">Button</button>
-                </p><br>
-                <p>
-                  <input class="button" type="submit" value="Submit" disabled>
-                </p><br>
-                <p><a class="button button--block" href="#">Link</a></p>
-              </div>
-            </section><br><br>
-            <section>
-              <h5>Checkboxes</h5><br>
-              <div><span class="checkbox">
-                  <input class="checkbox__tag" type="checkbox" checked><span class="checkbox__box"></span></span>&nbsp;<span class="checkbox">
-                  <input class="checkbox__tag" type="checkbox" disabled><span class="checkbox__box"></span></span>&nbsp;<span class="checkbox checkbox--invalid">
-                  <input class="checkbox__tag" type="checkbox"><span class="checkbox__box"></span></span></div><br>
-              <div>
-                <label class="label label--checkbox"><span class="checkbox">
-                    <input class="checkbox__tag" type="checkbox"><span class="checkbox__box"></span></span>Checkbox</label>
-              </div>
-            </section><br><br>
-            <section>
-              <h5>Inputs</h5><br>
-              <div style="width: 280px;">
-                <div class="input">
-                  <input placeholder="Placeholder">
-                </div><br>
-                <div class="input">
-                  <input value="Disabled" disabled>
-                </div><br>
-                <div class="input input--invalid">
-                  <input value="Value">
-                </div>
-              </div>
-            </section><br><br>
-            <section>
-              <h5>Radios</h5><br>
-              <div><span class="radio">
-                  <input class="radio__tag" type="radio" name="radio" checked><span class="radio__box"></span></span>&nbsp;<span class="radio">
-                  <input class="radio__tag" type="radio" name="radio" disabled><span class="radio__box"></span></span>&nbsp;<span class="radio radio--invalid">
-                  <input class="radio__tag" type="radio" name="radio"><span class="radio__box"></span></span></div><br>
-              <div>
-                <label class="label label--radio"><span class="radio">
-                    <input class="radio__tag" type="radio" name="radio"><span class="radio__box"></span></span>Radio</label>
-              </div>
-            </section><br><br>
-            <section>
-              <h5>Selects</h5><br>
-              <div style="width: 280px;">
-                <div class="select">
-                  <select class="select__tag">
-                    <option disabled selected>Placeholder</option>
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
-                  </select><span class="select__arrow"></span>
-                </div><br>
-                <div class="select">
-                  <select class="select__tag" disabled>
-                    <option selected>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
-                  </select><span class="select__arrow"></span>
-                </div><br>
-                <div class="select select--invalid">
-                  <select class="select__tag">
-                    <option selected>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
-                  </select><span class="select__arrow"></span>
-                </div>
-              </div>
-            </section><br><br>
-            <section>
-              <h5>Textareas</h5><br>
-              <div style="width: 280px;">
-                <div class="textarea">
-                  <textarea rows="4" placeholder="Placeholder"></textarea>
-                </div><br>
-                <div class="textarea">
-                  <textarea rows="4" disabled>Disabled</textarea>
-                </div><br>
-                <div class="textarea textarea--invalid">
-                  <textarea rows="4">Value</textarea>
-                </div>
-              </div>
-            </section><br><br>
-            <section>
-              <h5>jQuery UI Autocomplete</h5><br>
-              <div style="width: 280px;">
-                <div class="input">
-                  <input class="js-autocomplete-input" placeholder="Autocomplete">
-                </div>
-              </div>
-            </section><br><br>
-            <section>
-              <h5>jQuery UI Datepicker</h5><br>
-              <div style="width: 280px;">
-                <div class="input">
-                  <input class="js-datepicker-input" placeholder="Datepicker" readonly>
-                </div>
-              </div>
-            </section><br><br>
-            <section>
-              <h5>jQuery UI Selectmenu</h5><br>
-              <div style="width: 280px;">
-                <select class="js-selectmenu-select">
-                  <option selected disabled>Placeholder</option>
-                  <option>Option 1</option>
-                  <option>Option 2</option>
-                  <option>Lorem ipsum dolor sit amet, consectetur adipiscing elit</option>
-                </select>
-              </div><br>
-              <div style="width: 280px;">
-                <select class="js-selectmenu-select">
-                  <option selected>Option 1</option>
-                  <option>Option 2</option>
-                  <option>Option 3</option>
-                  <option>Option 4</option>
-                  <option>Option 5</option>
-                  <option>Option 6</option>
-                  <option>Option 7</option>
-                  <option>Option 8</option>
-                  <option>Option 9</option>
-                  <option>Option 10</option>
-                </select>
-              </div>
-            </section>
-          </article><br><br><br>
-          <article>
-            <h3>WYSIWYG</h3><br>
-            <div class="wysiwyg js-wysiwyg" style="max-width: 800px;">
-              <h1>Inline elements in&nbsp;paragraph (Heading&nbsp;1)</h1>
-              <p><a href='#'>Lorem ipsum</a> <b>dolor</b> <i>sit</i> <strong>amet</strong>, <em>consectetur</em> <sub>adipiscing</sub> <sup>elit</sup>, <cite>sed do eiusmod</cite> <q>tempor incididunt</q> <del>ut labore</del> <ins>et dolore</ins> <mark>magna aliqua</mark>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <h2>Blockquote (Heading&nbsp;2)</h2>
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <footer>
-                  <cite>Lorem ipsum</cite>
-                </footer>
-              </blockquote>
-              <h3>Image with caption and without (Heading&nbsp;3)</h3>
-              <figure><img src="http://via.placeholder.com/720x405" alt="">
-                <figcaption>Lorem ipsum</figcaption>
-              </figure>
-              <p><img src="http://via.placeholder.com/720x405" alt=""></p>
-              <h4>Definition, ordered &amp;&nbsp;unordered lists (Heading&nbsp;4)</h4>
-              <dl>
-                <dt>Lorem ipsum</dt>
-                <dd>Lorem ipsum dolor sit amet</dd>
-              </dl>
-              <ol>
-                <li>Lorem ipsum</li>
-                <li>Lorem ipsum</li>
-                <li>
-                  <p>Lorem ipsum</p>
-                  <ol>
-                    <li>Lorem ipsum</li>
-                    <li>Lorem ipsum</li>
-                    <li>
-                      <p>Lorem ipsum</p>
-                      <ol>
-                        <li>Lorem ipsum</li>
-                        <li>Lorem ipsum</li>
-                        <li>
-                          <p>Lorem ipsum</p>
-                          <ul>
-                            <li>Lorem ipsum</li>
-                            <li>Lorem ipsum</li>
-                            <li>Lorem ipsum</li>
-                          </ul>
-                        </li>
-                      </ol>
-                    </li>
-                  </ol>
-                </li>
-              </ol>
-              <ul>
-                <li>Lorem ipsum</li>
-                <li>Lorem ipsum</li>
-                <li>
-                  <p>Lorem ipsum</p>
-                  <ul>
-                    <li>Lorem ipsum</li>
-                    <li>Lorem ipsum</li>
-                    <li>
-                      <p>Lorem ipsum</p>
-                      <ul>
-                        <li>Lorem ipsum</li>
-                        <li>Lorem ipsum</li>
-                        <li>
-                          <p>Lorem ipsum</p>
-                          <ol>
-                            <li>Lorem ipsum</li>
-                            <li>Lorem ipsum</li>
-                            <li>Lorem ipsum</li>
-                          </ol>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <h5>Table (Heading&nbsp;5)</h5>
-              <table>
-                <caption>Lorem ipsum</caption>
-                <thead>
-                  <tr>
-                    <th>Lorem ipsum</th>
-                    <th>Lorem ipsum</th>
-                    <th>Lorem ipsum</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Lorem ipsum dolor sit amet</td>
-                    <td>Lorem ipsum dolor sit amet</td>
-                    <td>Lorem ipsum dolor sit amet</td>
-                  </tr>
-                  <tr>
-                    <td>Lorem ipsum dolor sit amet</td>
-                    <td>Lorem ipsum dolor sit amet</td>
-                    <td>Lorem ipsum dolor sit amet</td>
-                  </tr>
-                  <tr>
-                    <td>Lorem ipsum dolor sit amet</td>
-                    <td>Lorem ipsum dolor sit amet</td>
-                    <td>Lorem ipsum dolor sit amet</td>
-                  </tr>
-                  <tr>
-                    <td>Lorem ipsum dolor sit amet</td>
-                    <td>Lorem ipsum dolor sit amet</td>
-                    <td>Lorem ipsum dolor sit amet</td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td colspan="3">Lorem ipsum</td>
-                  </tr>
-                </tfoot>
-              </table>
-              <h6>Video embed (Heading&nbsp;6)</h6>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/6KxtgS2lU94" allowfullscreen></iframe>
-            </div>
-          </article><br><br><br>
+          </article>
+          <!--    p Черный Плэйграунд-->
+          <!--    p: small Черный Плэйграунд-->
+          <!---->
+          <!--br-->
+          <!--br-->
+          <!--br-->
+          <!---->
+          <!--article-->
+          <!--    h3 Links-->
+          <!--    br-->
+          <!---->
+          <!--    h6: a(href='#') Heading link-->
+          <!--    br-->
+          <!--    p: a(href='#') Link-->
+          <!--    br-->
+          <!--    p: a.link.link--current(href='#') Link current-->
+          <!--    br-->
+          <!--    p: a(href='#' style='display: inline-flex; align-items: center;')-->
+          <!--        svg.icon.icon--20(role='img')-->
+          <!--            use(xlink:href='img/icons.svg#icon-check')-->
+          <!--        | Link with icon-->
+          <!--    br-->
+          <!--    p: a.link.link--pseudo(href='#') Pseudo link-->
+          <!--    br-->
+          <!--    p: a.link.link--pseudo(href='#' style='display: inline-flex; align-items: center;')-->
+          <!--        svg.icon.icon--20(role='img')-->
+          <!--            use(xlink:href='img/icons.svg#icon-check')-->
+          <!--        | Pseudo link with icon-->
+          <!---->
+          <!--br-->
+          <!--br-->
+          <!--br-->
+          <!---->
+          <!--article-->
+          <!--    h3 Icons-->
+          <!--    br-->
+          <!---->
+          <!--    p-->
+          <!--        svg.icon.icon--20(role='img')-->
+          <!--            use(xlink:href='img/icons.svg#icon-check')-->
+          <!---->
+          <!--br-->
+          <!--br-->
+          <!--br-->
+          <!---->
+          <!--article-->
+          <!--    h3 Rub sign-->
+          <!--    br-->
+          <!---->
+          <!--    h6 Sans-->
+          <!--    p 1&nbsp;000&nbsp;000&nbsp;<span class='rub-sans'>Р</span>-->
+          <!---->
+          <!--    br-->
+          <!--    br-->
+          <!---->
+          <!--    h6 Serif-->
+          <!--    p 1&nbsp;000&nbsp;000&nbsp;<span class='rub-serif'>Р</span>-->
+          <!---->
+          <!--br-->
+          <!--br-->
+          <!--br-->
+          <!---->
+          <!--article-->
+          <!--    h3 Forms-->
+          <!--    br-->
+          <!---->
+          <!--    section-->
+          <!--        h5 Buttons-->
+          <!--        br-->
+          <!---->
+          <!--        div(style='width: 280px;')-->
+          <!--            p: button.button(type='button') Button-->
+          <!--            br-->
+          <!--            p: input.button(type='submit' value='Submit' disabled)-->
+          <!--            br-->
+          <!--            p: a.button.button--block(href='#') Link-->
+          <!---->
+          <!--    br-->
+          <!--    br-->
+          <!---->
+          <!--    section-->
+          <!--        h5 Checkboxes-->
+          <!--        br-->
+          <!---->
+          <!--        div-->
+          <!--            span.checkbox-->
+          <!--                input.checkbox__tag(type='checkbox' checked)-->
+          <!--                span.checkbox__box-->
+          <!--            | &nbsp;-->
+          <!--            span.checkbox-->
+          <!--                input.checkbox__tag(type='checkbox' disabled)-->
+          <!--                span.checkbox__box-->
+          <!--            | &nbsp;-->
+          <!--            span.checkbox.checkbox--invalid-->
+          <!--                input.checkbox__tag(type='checkbox')-->
+          <!--                span.checkbox__box-->
+          <!--        br-->
+          <!---->
+          <!--        div-->
+          <!--            label.label.label--checkbox-->
+          <!--                span.checkbox-->
+          <!--                    input.checkbox__tag(type='checkbox')-->
+          <!--                    span.checkbox__box-->
+          <!--                | Checkbox-->
+          <!---->
+          <!--    br-->
+          <!--    br-->
+          <!---->
+          <!--    section-->
+          <!--        h5 Inputs-->
+          <!--        br-->
+          <!---->
+          <!--        div(style='width: 280px;')-->
+          <!--            .input-->
+          <!--                input(placeholder='Placeholder')-->
+          <!--            br-->
+          <!--            .input-->
+          <!--                input(value='Disabled' disabled)-->
+          <!--            br-->
+          <!--            .input.input--invalid-->
+          <!--                input(value='Value')-->
+          <!--    br-->
+          <!--    br-->
+          <!---->
+          <!--    section-->
+          <!--        h5 Radios-->
+          <!--        br-->
+          <!---->
+          <!--        div-->
+          <!--            span.radio-->
+          <!--                input.radio__tag(type='radio' name='radio' checked)-->
+          <!--                span.radio__box-->
+          <!--            | &nbsp;-->
+          <!--            span.radio-->
+          <!--                input.radio__tag(type='radio' name='radio' disabled)-->
+          <!--                span.radio__box-->
+          <!--            | &nbsp;-->
+          <!--            span.radio.radio--invalid-->
+          <!--                input.radio__tag(type='radio' name='radio')-->
+          <!--                span.radio__box-->
+          <!--        br-->
+          <!---->
+          <!--        div-->
+          <!--            label.label.label--radio-->
+          <!--                span.radio-->
+          <!--                    input.radio__tag(type='radio' name='radio')-->
+          <!--                    span.radio__box-->
+          <!--                | Radio-->
+          <!---->
+          <!--    br-->
+          <!--    br-->
+          <!---->
+          <!--    section-->
+          <!--        h5 Selects-->
+          <!--        br-->
+          <!---->
+          <!--        div(style='width: 280px;')-->
+          <!--            .select-->
+          <!--                select.select__tag-->
+          <!--                    option(disabled selected) Placeholder-->
+          <!--                    option Option 1-->
+          <!--                    option Option 2-->
+          <!--                    option Option 3-->
+          <!--                span.select__arrow-->
+          <!--            br-->
+          <!--            .select-->
+          <!--                select.select__tag(disabled)-->
+          <!--                    option(selected) Option 1-->
+          <!--                    option Option 2-->
+          <!--                    option Option 3-->
+          <!--                span.select__arrow-->
+          <!--            br-->
+          <!--            .select.select--invalid-->
+          <!--                select.select__tag-->
+          <!--                    option(selected) Option 1-->
+          <!--                    option Option 2-->
+          <!--                    option Option 3-->
+          <!--                span.select__arrow-->
+          <!---->
+          <!--    br-->
+          <!--    br-->
+          <!---->
+          <!--    section-->
+          <!--        h5 Textareas-->
+          <!--        br-->
+          <!---->
+          <!--        div(style='width: 280px;')-->
+          <!--            .textarea-->
+          <!--                textarea(rows='4' placeholder='Placeholder')-->
+          <!--            br-->
+          <!--            .textarea-->
+          <!--                textarea(rows='4' disabled) Disabled-->
+          <!--            br-->
+          <!--            .textarea.textarea--invalid-->
+          <!--                textarea(rows='4') Value-->
+          <!---->
+          <!--    br-->
+          <!--    br-->
+          <!---->
+          <!--    section-->
+          <!--        h5 jQuery UI Autocomplete-->
+          <!--        br-->
+          <!---->
+          <!--        div(style='width: 280px;')-->
+          <!--            .input-->
+          <!--                input.js-autocomplete-input(placeholder='Autocomplete')-->
+          <!---->
+          <!--    br-->
+          <!--    br-->
+          <!---->
+          <!--    section-->
+          <!--        h5 jQuery UI Datepicker-->
+          <!--        br-->
+          <!---->
+          <!--        div(style='width: 280px;')-->
+          <!--            .input-->
+          <!--                input.js-datepicker-input(placeholder='Datepicker' readonly)-->
+          <!---->
+          <!--    br-->
+          <!--    br-->
+          <!---->
+          <!--    section-->
+          <!--        h5 jQuery UI Selectmenu-->
+          <!--        br-->
+          <!---->
+          <!--        div(style='width: 280px;')-->
+          <!--            select.js-selectmenu-select-->
+          <!--                option(selected disabled) Placeholder-->
+          <!--                option Option 1-->
+          <!--                option Option 2-->
+          <!--                option Lorem ipsum dolor sit amet, consectetur adipiscing elit-->
+          <!--        br-->
+          <!--        div(style='width: 280px;')-->
+          <!--            select.js-selectmenu-select-->
+          <!--                option(selected) Option 1-->
+          <!--                option Option 2-->
+          <!--                option Option 3-->
+          <!--                option Option 4-->
+          <!--                option Option 5-->
+          <!--                option Option 6-->
+          <!--                option Option 7-->
+          <!--                option Option 8-->
+          <!--                option Option 9-->
+          <!--                option Option 10-->
+          <!---->
+          <!--br-->
+          <!--br-->
+          <!--br-->
+          <!---->
+          <!--article-->
+          <!--    h3 WYSIWYG-->
+          <!--    br-->
+          <!---->
+          <!--    .wysiwyg.js-wysiwyg(style='max-width: 800px;')-->
+          <!--        h1 Inline elements in&nbsp;paragraph (Heading&nbsp;1)-->
+          <!--        p <a href='#'>Lorem ipsum</a> <b>dolor</b> <i>sit</i> <strong>amet</strong>, <em>consectetur</em> <sub>adipiscing</sub> <sup>elit</sup>, <cite>sed do eiusmod</cite> <q>tempor incididunt</q> <del>ut labore</del> <ins>et dolore</ins> <mark>magna aliqua</mark>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+          <!---->
+          <!--        h2 Blockquote (Heading&nbsp;2)-->
+          <!--        blockquote-->
+          <!--            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.-->
+          <!--            footer-->
+          <!--                cite Lorem ipsum-->
+          <!---->
+          <!--        h3 Image with caption and without (Heading&nbsp;3)-->
+          <!--        figure-->
+          <!--            img(src='http://via.placeholder.com/720x405' alt='')-->
+          <!--            figcaption Lorem ipsum-->
+          <!--        p: img(src='http://via.placeholder.com/720x405' alt='')-->
+          <!---->
+          <!--        h4 Definition, ordered &amp;&nbsp;unordered lists (Heading&nbsp;4)-->
+          <!--        dl-->
+          <!--            dt Lorem ipsum-->
+          <!--            dd Lorem ipsum dolor sit amet-->
+          <!--        ol-->
+          <!--            li Lorem ipsum-->
+          <!--            li Lorem ipsum-->
+          <!--            li-->
+          <!--                p Lorem ipsum-->
+          <!--                ol-->
+          <!--                    li Lorem ipsum-->
+          <!--                    li Lorem ipsum-->
+          <!--                    li-->
+          <!--                        p Lorem ipsum-->
+          <!--                        ol-->
+          <!--                            li Lorem ipsum-->
+          <!--                            li Lorem ipsum-->
+          <!--                            li-->
+          <!--                                p Lorem ipsum-->
+          <!--                                ul-->
+          <!--                                    li Lorem ipsum-->
+          <!--                                    li Lorem ipsum-->
+          <!--                                    li Lorem ipsum-->
+          <!--        ul-->
+          <!--            li Lorem ipsum-->
+          <!--            li Lorem ipsum-->
+          <!--            li-->
+          <!--                p Lorem ipsum-->
+          <!--                ul-->
+          <!--                    li Lorem ipsum-->
+          <!--                    li Lorem ipsum-->
+          <!--                    li-->
+          <!--                        p Lorem ipsum-->
+          <!--                        ul-->
+          <!--                            li Lorem ipsum-->
+          <!--                            li Lorem ipsum-->
+          <!--                            li-->
+          <!--                                p Lorem ipsum-->
+          <!--                                ol-->
+          <!--                                    li Lorem ipsum-->
+          <!--                                    li Lorem ipsum-->
+          <!--                                    li Lorem ipsum-->
+          <!---->
+          <!--        h5 Table (Heading&nbsp;5)-->
+          <!--        table-->
+          <!--            caption Lorem ipsum-->
+          <!--            thead-->
+          <!--                tr-->
+          <!--                    th Lorem ipsum-->
+          <!--                    th Lorem ipsum-->
+          <!--                    th Lorem ipsum-->
+          <!--            tbody-->
+          <!--                - var tr = 0;-->
+          <!--                while tr < 4-->
+          <!--                    - tr++-->
+          <!--                    tr-->
+          <!--                        td Lorem ipsum dolor sit amet-->
+          <!--                        td Lorem ipsum dolor sit amet-->
+          <!--                        td Lorem ipsum dolor sit amet-->
+          <!--            tfoot-->
+          <!--                tr-->
+          <!--                    td(colspan='3') Lorem ipsum-->
+          <!---->
+          <!--        h6 Video embed (Heading&nbsp;6)-->
+          <!--        iframe(width='560' height='315' src='https://www.youtube.com/embed/6KxtgS2lU94' allowfullscreen)-->
+          <!---->
+          <!--br-->
+          <!--br-->
+          <!--br-->
         </div>
       </main>
       <footer class="site-footer">
